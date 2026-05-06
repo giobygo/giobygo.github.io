@@ -1,149 +1,197 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Gio by Go</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gio by Go</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0B0B0B;
-      color: #ffffff;
-      line-height: 1.6;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
 
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+body{
+  font-family:'Inter',sans-serif;
+  background:#0A0A0A;
+  color:#EAEAEA;
+  -webkit-font-smoothing:antialiased;
+}
 
-    .hero-sub {
-      font-size: 20px;
-      max-width: 500px;
-      margin-top: 10px;
-      color: #cccccc;
-    }
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:80px 40px;
+}
 
-    h2 {
-      margin-top: 70px;
-      font-size: 26px;
-      border-top: 1px solid #222;
-      padding-top: 20px;
-    }
+/* HERO */
+.hero{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  margin-bottom:120px;
+}
 
-    p {
-      color: #cccccc;
-    }
+.hero h1{
+  font-size:72px;
+  font-weight:600;
+  letter-spacing:-2px;
+}
 
-    .impact {
-      margin-top: 30px;
-      font-size: 18px;
-      color: #ffffff;
-    }
+.hero p{
+  font-size:20px;
+  color:#9A9A9A;
+  max-width:480px;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      border: 1px solid #ffffff;
-      color: #ffffff;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+.cta{
+  display:inline-block;
+  margin-top:10px;
+  padding:14px 28px;
+  border:1px solid #fff;
+  color:#fff;
+  text-decoration:none;
+  transition:.3s;
+}
 
-    .btn:hover {
-      background: #ffffff;
-      color: #000000;
-    }
+.cta:hover{
+  background:#fff;
+  color:#000;
+}
 
-    .services p {
-      margin: 12px 0;
-    }
+/* GRID */
+.section{
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:60px;
+  margin-bottom:120px;
+}
 
-    footer {
-      margin-top: 80px;
-      font-size: 14px;
-      color: #777;
-    }
-  </style>
+.label{
+  font-size:12px;
+  letter-spacing:2px;
+  color:#666;
+  text-transform:uppercase;
+}
+
+.content{
+  font-size:28px;
+  line-height:1.4;
+}
+
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+.service{
+  border-top:1px solid #222;
+  padding-top:20px;
+}
+
+.service h3{
+  font-size:16px;
+  margin-bottom:10px;
+}
+
+.service p{
+  font-size:14px;
+  color:#888;
+}
+
+/* FOOTER */
+.footer{
+  margin-top:140px;
+  font-size:13px;
+  color:#555;
+}
+
+/* RESPONSIVE */
+@media(max-width:800px){
+  .section{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:48px;
+  }
+
+  .services{
+    grid-template-columns:1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <!-- HERO -->
+  <!-- HERO -->
+  <div class="hero">
     <h1>Gio by Go</h1>
-    <p class="hero-sub">
-      Diseño estratégico para marcas que quieren avanzar
-    </p>
+    <p>Diseño estratégico para marcas que quieren avanzar</p>
+    <a class="cta" href="mailto:giobygo@gmail.com">Hablemos</a>
+  </div>
 
-    <a class="btn" href="mailto:giobygo@gmail.com">Hablemos</a>
-
-    <p class="impact">
+  <!-- ENFOQUE -->
+  <div class="section">
+    <div class="label">Enfoque</div>
+    <div class="content">
       No diseñamos por estética. Diseñamos para que funcione.
-    </p>
+    </div>
+  </div>
 
-    <!-- PROPUESTA -->
-    <h2>No es solo diseño.</h2>
-    <p>
-      Cada decisión responde a un objetivo.  
-      Menos intuición. Más estrategia.
-    </p>
-
-    <!-- SERVICIOS -->
-    <h2>Qué hacemos</h2>
+  <!-- SERVICIOS -->
+  <div class="section">
+    <div class="label">Servicios</div>
 
     <div class="services">
-      <p><strong>01 — Branding</strong><br>
-      Estrategia e identidad para marcas que necesitan posicionarse</p>
+      <div class="service">
+        <h3>Branding</h3>
+        <p>Construcción estratégica de identidad y posicionamiento</p>
+      </div>
 
-      <p><strong>02 — Contenido digital</strong><br>
-      Comunicación pensada para destacar en entornos digitales</p>
+      <div class="service">
+        <h3>Contenido digital</h3>
+        <p>Comunicación pensada para entornos digitales</p>
+      </div>
 
-      <p><strong>03 — Diseño web</strong><br>
-      Experiencias digitales claras, funcionales y enfocadas en conversión</p>
+      <div class="service">
+        <h3>Diseño web</h3>
+        <p>Experiencias digitales claras y funcionales</p>
+      </div>
 
-      <p><strong>04 — Optimización UX & Performance</strong><br>
-      Mejoramos lo que ya tienes para que genere resultados</p>
+      <div class="service">
+        <h3>UX & Performance</h3>
+        <p>Optimización basada en datos y resultados</p>
+      </div>
     </div>
-
-    <!-- PROYECTOS -->
-    <h2>Proyectos que generan resultados</h2>
-    <p>
-      Cada proyecto responde a un problema real de marca,  
-      con soluciones pensadas para generar impacto.
-    </p>
-
-    <p><em>Casos en construcción.</em></p>
-
-    <!-- ENFOQUE -->
-    <h2>Enfoque</h2>
-    <p>
-      Cada proyecto parte de entender el problema, definir una estrategia
-      y ejecutar con intención.
-    </p>
-
-    <!-- CIERRE -->
-    <h2>¿Tu marca no está generando resultados?</h2>
-    <p>Hablemos y construyamos una solución real.</p>
-
-    <a class="btn" href="mailto:giobygo@gmail.com">Escríbeme</a>
-
-    <!-- FOOTER -->
-    <footer>
-      © 2026 Gio by Go — Diseño estratégico
-    </footer>
-
   </div>
+
+  <!-- PROYECTOS -->
+  <div class="section">
+    <div class="label">Proyectos</div>
+    <div class="content">
+      Casos en construcción.
+    </div>
+  </div>
+
+  <!-- CTA FINAL -->
+  <div class="section">
+    <div class="label">Contacto</div>
+    <div class="content">
+      ¿Tu marca no está generando resultados?<br><br>
+      <a class="cta" href="mailto:giobygo@gmail.com">Escríbeme</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    © 2026 Gio by Go
+  </div>
+
+</div>
 
 </body>
 </html>
